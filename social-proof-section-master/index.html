@@ -23,7 +23,9 @@
       font-family: 'Spartan', serif;
       font-size: 15px;
       /*background-color: hsl(300, 24%, 96%);*/
-      background-image: url("images/bg-pattern-bottom-desktop.svg"), url("images/bg-pattern-top-desktop.svg");
+      background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: right 70vw bottom 30vh, left 47vw top 52vh;
     }
 
     .grid-box {
@@ -73,8 +75,8 @@
     }
 
     .irene {
-      /*justify-self: center;
-      align-self: center;*/
+      justify-self: center;
+      align-self: center;
     }
 
     .anne {
@@ -151,8 +153,15 @@
       color: hsl(228, 45%, 44%);
     }
 
-    @media screen and (max-width: 375px) {
-      .grid-box{
+    @media only screen and (max-width: 375px) {
+      .body {
+        background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: right 50vh bottom 30vw, left 40vh 50vw;
+      }
+
+      .grid-box {
+        display: flex;
         flex-direction: column;
       }
     }
